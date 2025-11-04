@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Produk Kecantikan</title>
+    <style>
+        /* Reset dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #f4f7ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px;
+            width: 100%;
+            max-width: 800px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1f2a38;
+            font-size: 2em;
+        }
+
+        h1::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #007bff;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        th {
+            background: linear-gradient(90deg, #ff0077, #d40071);
+            color: #fff;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background: #f0f7ff;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        td {
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        /* Hover effect untuk baris */
+        tr:hover {
+            background: #d0e4ff;
+            cursor: pointer;
+        }
+
+        /* Highlight ketika diklik (JS) */
+        .highlight {
+            background: #ff007b;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Daftar Produk Kecantikan</h1>
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>Produk</th>
+                    <th>Harga Produk</th>
+                    <th>Expiration Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Serum Vitamin C</td>
+                    <td>Rp150.000</td>
+                    <td>12/2025</td>
+                </tr>
+                <tr>
+                    <td>Lipstik Matte</td>
+                    <td>Rp120.000</td>
+                    <td>06/2026</td>
+                </tr>
+                <tr>
+                    <td>Moisturizer Kulit Sensitif</td>
+                    <td>Rp200.000</td>
+                    <td>09/2025</td>
+                </tr>
+                <tr>
+                    <td>Parfum Floral</td>
+                    <td>Rp250.000</td>
+                    <td>03/2027</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // JavaScript sederhana: klik pada baris akan menyorot baris tersebut
+        const rows = document.querySelectorAll('#productTable tbody tr');
+
+        rows.forEach(row => {
+            row.addEventListener('click', () => {
+                // Hapus highlight dari semua baris
+                rows.forEach(r => r.classList.remove('highlight'));
+                // Tambahkan highlight pada baris yang diklik
+                row.classList.add('highlight');
+            });
+        });
+    </script>
+</body>
+</html>

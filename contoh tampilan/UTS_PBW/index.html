@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Saya</title>
+
+  <style>
+    /* Warna dan gaya dasar */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #f74a8c, #f95a99);
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(to right, #f74a8c, #e03a74);
+      color: white;
+      text-align: center;
+      padding: 40px 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /* Navigasi */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 15px 0;
+      border-radius: 0 0 20px 20px;
+      backdrop-filter: blur(8px);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      background-color: rgba(255, 255, 255, 0.15);
+      padding: 10px 25px;
+      border-radius: 25px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Konten utama */
+    main {
+      background-color: #f9f9f9;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h2 {
+      color: #2b3a67;
+    }
+
+    .welcome-box {
+      background-color: #e9f0ff;
+      color: #2b3a67;
+      padding: 15px 20px;
+      display: inline-block;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>Website Kecantikan Egi Laurenzi Anugrah</header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#pendidikan">Produk</a>
+  </nav>
+
+  <main id="home">
+    <h2>Home</h2>
+    <div class="welcome-box" id="welcomeMessage">Selamat datang!</div>
+    <p>
+      Selamat Datang di Dunia Kecantikan kami
+    </p>
+    <p>
+      Di website ini, Anda akan menemukan berbagai produk kosmetik berkualitas, mulai dari perawatan kulit, makeup, hingga parfum yang memikat. 
+      Setiap produk dipilih dengan cermat untuk memberikan pengalaman perawatan terbaik bagi Anda.
+    </p>
+    <p>
+      Melalui website ini, kami mengajak Anda untuk mengeksplorasi rangkaian produk yang dapat menunjang penampilan dan meningkatkan rasa percaya diri.
+      Temukan tips perawatan kulit, tutorial makeup, dan rekomendasi produk terbaru yang sesuai dengan kebutuhan Anda. 
+      Mari wujudkan kecantikan alami Anda dengan pilihan produk yang tepat dan terpercaya.
+    </p>
+  </main>
+
+  <script>
+    // Saat halaman dimuat, tampilkan prompt untuk nama pengguna
+    window.onload = function() {
+      let nama = prompt("Masukkan nama Anda:");
+      let pesan = document.getElementById("welcomeMessage");
+
+      if (nama) {
+        pesan.textContent = "Selamat datang, " + nama + "!";
+        alert("Halo " + nama + ", selamat datang di website kami!");
+      } else {
+        pesan.textContent = "Selamat datang di website kami!";
+        alert("Selamat datang di website kami!");
+      }
+    }
+  </script>
+</body>
+</html>
